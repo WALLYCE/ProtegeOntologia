@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-20/"
+     xml:base="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-20/"
+     xmlns:ns="http://www.w3.org/ns/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:www.ufjf.br/ontologi">
+        <owl:versionIRI rdf:resource="urn:absolute:www.ufjf.br/ontologi"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/cursouDisciplina -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/cursouDisciplina">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/obteveNota -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/obteveNota">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/Nota"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/pertenceADisciplina -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/pertenceADisciplina">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/Disciplina"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/AnoCurso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/AnoCurso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/AnoIngresso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/AnoIngresso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Aluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/Cotista -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/Cotista">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/NaturalJF -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/NaturalJF">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/RecebeuAEB -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/RecebeuAEB">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/SemestreCurso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/SemestreCurso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/valorNota -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/valorNota">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/Aluno -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/Aluno"/>
+    
+
+
+    <!-- http://www.w3.org/ns/Disciplina -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/Disciplina"/>
+    
+
+
+    <!-- http://www.w3.org/ns/Nota -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/Nota"/>
+    
+
+
+    <!-- http://www.w3.org/ns/PerfilAluno -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/PerfilAluno">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/Aluno"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/ns/LABORATÓRIO_DE_CIÊNCIA_DA_COMPUTAÇÃO -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/LABORATÓRIO_DE_CIÊNCIA_DA_COMPUTAÇÃO">
+        <rdf:type rdf:resource="http://www.w3.org/ns/Disciplina"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/Nota1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/Nota1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/Nota"/>
+        <ns:pertenceADisciplina rdf:resource="http://www.w3.org/ns/LABORATÓRIO_DE_CIÊNCIA_DA_COMPUTAÇÃO"/>
+        <ns:AnoCurso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</ns:AnoCurso>
+        <ns:SemestreCurso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</ns:SemestreCurso>
+        <ns:valorNota rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns:valorNota>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/ns/1401243 -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/ns/1401243">
+        <rdf:type rdf:resource="http://www.w3.org/ns/PerfilAluno"/>
+        <ns:cursouDisciplina rdf:resource="http://www.w3.org/ns/LABORATÓRIO_DE_CIÊNCIA_DA_COMPUTAÇÃO"/>
+        <ns:obteveNota rdf:resource="http://www.w3.org/ns/Nota1"/>
+        <ns:AnoIngresso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</ns:AnoIngresso>
+        <ns:Cotista rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns:Cotista>
+        <ns:NaturalJF rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ns:NaturalJF>
+        <ns:RecebeuAEB rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</ns:RecebeuAEB>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
