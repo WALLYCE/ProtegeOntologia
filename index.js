@@ -1,40 +1,46 @@
-const $rdf = require('rdflib');
 const fs = require('fs');
+const $rdf = require('rdflib');
 
 const store = $rdf.graph();
+const ns = {
+  rdf: $rdf.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#'),
+  owl: $rdf.Namespace('http://www.w3.org/2002/07/owl#'),
+  rdfs: $rdf.Namespace('http://www.w3.org/2000/01/rdf-schema#'),
+  onto: $rdf.Namespace('http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#')
+};
 
-const localFilePath = 'C:/ontologia.rdf';
+// Lendo a ontologia fornecida em RDF
+const rdfContent = fs.readFileSync('C:/Users/jo_az/OneDrive/Documentos/Ontologias/ontologia.rdf', 'utf-8');
 
-fs.readFile(localFilePath, 'utf8', (err, data) => {
-  if (err) {
-    console.error('Erro ao ler o arquivo:', err);
-    return;
-  }
-  
-  // Parse do conteúdo RDF
-  $rdf.parse(data, store, 'file:///C:/ontologia.rdf', 'application/rdf+xml');
-  
-  // Adicionar instâncias
-  const ns = {
-    ex: $rdf.Namespace('http://exemplo.com/ontologia#'), // Substitua pelo seu namespace
-  };
-  
-  
-  const sujeito = $rdf.sym('http://exemplo.com/ontologia#instancia1'); // Substitua pela URI da instância
-  const predicado = ns.ex['propriedade']; // Substitua 'propriedade' pelo nome da propriedade
-  const objeto = $rdf.lit('Valor da Propriedade'); // Substitua pelo valor da propriedade
-  
-  store.add(sujeito, predicado, objeto);
-  
-  // Serializar o grafo de volta para RDF/XML
-  const rdfData = $rdf.serialize(undefined, store, 'file:///C:/ontologia_refeita.rdf', 'application/rdf+xml');
-  
-  // Escrever o RDF de volta no arquivo
-  fs.writeFile(localFilePath, rdfData, (err) => {
-    if (err) {
-      console.error('Erro ao salvar o arquivo:', err);
-      return;
-    }
-    console.log('Ontologia salva com sucesso');
-  });
+// Parse do RDF
+$rdf.parse(rdfContent, store, 'http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29', 'application/rdf+xml');
+
+// Restante do código permanece igual...
+
+
+// Parse do RDF
+$rdf.parse(rdfContent, store, 'http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29', 'application/rdf+xml');
+
+// Adicionando indivíduo
+const alunoUri = ns.onto('1401243'); // Substitua com o URI do aluno
+const aluno = $rdf.sym(alunoUri);
+store.add(aluno, ns.rdf('type'), ns.onto('PerfilAluno'));
+
+// Adicionando DataProperties
+const anoIngresso = $rdf.literal(2021, undefined, ns.owl('int'));
+const cotista = $rdf.literal(false, undefined, ns.owl('boolean'));
+const naturalJF = $rdf.literal(true, undefined, ns.owl('boolean'));
+const recebeuAEB = $rdf.literal(false, undefined, ns.owl('boolean'));
+
+store.add(aluno, ns.onto('AnoIngresso'), anoIngresso);
+store.add(aluno, ns.onto('Cotista'), cotista);
+store.add(aluno, ns.onto('NaturalJF'), naturalJF);
+store.add(aluno, ns.onto('RecebeuAEB'), recebeuAEB);
+
+const rdfXml = new $rdf.Serializer(store).statementsToXML(store.match());
+
+// Salvar o RDF em um arquivo
+fs.writeFile('ontologia_modificada.rdf', rdfXml, (err) => {
+  if (err) throw err;
+  console.log('As modificações foram salvas com sucesso!');
 });

@@ -1,0 +1,94 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:unt="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29">
+       <rdf:value>
+        </rdf:value>
+    </owl:Ontology>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#cursouDisciplina">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Disciplina"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+                <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#obteveNota">
+                    <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno"/>
+                    <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+                </owl:ObjectProperty>
+                <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#pertenceADisciplina">
+                    <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+                    <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Disciplina"/>
+                </owl:ObjectProperty>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+                <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#obteveNota">
+                    <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno"/>
+                    <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+                </owl:ObjectProperty>
+                <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#pertenceADisciplina">
+                    <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+                    <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Disciplina"/>
+                </owl:ObjectProperty>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#obteveNota">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#pertenceADisciplina">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Disciplina"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#AnoCursada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#AnoIngresso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Cotista">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#NaturalJF">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#RecebeuAEB">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#PerfilAluno"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#SemestreCursada">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#valorNota">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    <owl:Class rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno">
+       <rdf:value>
+        </rdf:value>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Disciplina">
+       <rdf:value>
+        </rdf:value>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Nota">
+       <rdf:value>
+        </rdf:value>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#PerfilAluno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#Aluno"/>
+    </owl:Class>
+    <unt:PerfilAluno rdf:about="http://www.semanticweb.org/jo_az/ontologies/2023/9/untitled-ontology-29#1401243">
+        <unt:AnoIngresso rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</unt:AnoIngresso>
+        <unt:Cotista rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">0</unt:Cotista>
+        <unt:NaturalJF rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">1</unt:NaturalJF>
+        <unt:RecebeuAEB rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">0</unt:RecebeuAEB>
+    </unt:PerfilAluno>
+</rdf:RDF>
